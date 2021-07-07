@@ -1,0 +1,29 @@
+import java.util.*;
+class primearray
+{
+public static void main(String args[])
+{
+	int size,i,t,j,count=0;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter array size:");
+	size=sc.nextInt();
+	int ar[];
+	ar=new int[size];
+	System.out.println("enter array elements:");
+	for(i=0;i<size;i++)
+	{
+		ar[i]=sc.nextInt();
+	}
+	for(i=0;i<size;i++)
+	{
+	 	for(j=2;j<ar[i];j++)
+		{
+			if(ar[i]%j==0)
+				break;
+		}
+		if(j==ar[i])
+			count++;
+	}
+	System.out.println("no.of prime count="+count);
+}
+}
